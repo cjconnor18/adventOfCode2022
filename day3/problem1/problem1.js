@@ -1,4 +1,4 @@
-const gatherData = require('../gatherData.js');
+const gatherData = require('./gatherData.js');
 
 const fileLocation = './day3/problem1/test.txt';
 // const fileLocation = './day3/problem1/data.txt';
