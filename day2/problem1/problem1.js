@@ -1,8 +1,8 @@
-const gatherData = require('./gatherData.js');
+const gatherData = require('../gatherData.js');
 const checkHand = require('./checkHand.js');
 
-// const fileLocation = './day2/problem1/test.txt';
-const fileLocation = './day2/problem1/data.txt';
+// const fileLocation = './day2/test.txt';
+const fileLocation = './day2/data.txt';
 
 function calculateWins(data) {
     let sum = 0; 
