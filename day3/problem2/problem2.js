@@ -1,25 +1,24 @@
 const gatherData = require('../gatherData.js');
-const Rucksack = require('./Rucksack.js');
+const Group = require('./Group.js');
 const priorities = require('../priorities.js');
 
 // const fileLocation = './day3/test.txt';
 const fileLocation = './day3/data.txt';
 
-function createRucksacks(data) {
-    let arrOfRucksacks = [];
-    for(let i = 0; i < data.length; i++) {
-        let len = data[i].length/2;
-        let rucksack = new Rucksack(data[i].slice(0, len), data[i].slice(len));
-        arrOfRucksacks.push(rucksack);
+function createGroups(data) {
+    let arrOfGroups = [];
+    for(let i = 0; i < data.length; i += 3) {
+        let group = new Group(data[i], data[i + 1], data[i + 2]);
+        arrOfGroups.push(group);
     }
 
-    return arrOfRucksacks;
+    return arrOfGroups;
 }
 
 function findTotalOfPriorities(data, scoresObj) {
     let sum = 0;
     data.forEach((element) => {
-        sum += scoresObj[element.findDuplicate()]
+        sum += scoresObj[element.findPriority()]
     });
     return sum;
 }
@@ -28,7 +27,7 @@ function findTotalOfPriorities(data, scoresObj) {
 function run() {
     let prioritiesScores = priorities();
     let data = gatherData(fileLocation);
-    data = createRucksacks(data);
+    data = createGroups(data);
     return findTotalOfPriorities(data, prioritiesScores);
 }
 
