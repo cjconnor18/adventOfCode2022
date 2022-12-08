@@ -12,9 +12,14 @@ function arrangeData(current) {
     let firstArr = current.split("\r\n\r\n");
     let arr = [];
     for (let i = 0; i < firstArr.length; i++) {
+        sum = 0;
         arr.push(firstArr[i].split("\r\n"));
+        arr[i].forEach((x) => {
+            sum += parseInt(x);
+        })
+        arr[i] = sum;
     }
-
+    
     return arr;
 }
 
