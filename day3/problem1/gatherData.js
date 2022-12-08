@@ -10,12 +10,8 @@ function gatherData(fileLocation) {
 
 function arrangeData(current) {
     let arr = current.split("\r\n");
-    let curArr = [];
-    for(let i = 0; i < arr.length; i++) {
-        curArr.push(arr[i].split(" "));
-    }
     
-    return curArr;
+    return arr;
 }
 
 function getData(fileLocation) {
