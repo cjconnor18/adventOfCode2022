@@ -12,12 +12,9 @@ function calculateWins(data) {
     return sum;
 }
 
-
-
 function run() {
     let data = gatherData(fileLocation);
     return calculateWins(data);
 }
-
 
 module.exports = run;
