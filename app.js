@@ -16,7 +16,10 @@
 
 // Day 5
 // const run = require('./day5/problem1/problem.js'); // correct answer is JDTMRWCQJ
-const run = require('./day5/problem2/problem.js'); // correct answer is VHJDDCWRD
+// const run = require('./day5/problem2/problem.js'); // correct answer is VHJDDCWRD
+
+// Day 6
+const run = require('./day6/problem1/problem.js'); // correct answer is
 
 console.log(run());
 
